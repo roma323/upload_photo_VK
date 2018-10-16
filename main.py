@@ -34,6 +34,6 @@ def main():
 		upload_url = get_upload_server(ALBUM_ID,GROUP_ID)
 		data = upload(photo,upload_url)
 		r = API.photos.save(group_id=GROUP_ID, album_id=data['aid'],server=data['server'],photos_list=data['photos_list'],hash=data['hash'])
-		time.sleep(5)
+		time.sleep(15*60) # настройка времени. 15 мин * 60 сек
 if __name__ == '__main__':
 	main()
